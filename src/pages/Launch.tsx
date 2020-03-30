@@ -69,17 +69,17 @@ export default function Launch(props) {
             if (!url) props.navigation.replace('Login');
             else {
               const splits = url.split('/');
-              const requester = splits[4];
-              if (splits[5] === 'sss') {
-                if (splits[6] === 'ek') {
+              const requester = splits[3];
+              if (splits[4] === 'sss') {
+                if (splits[5] === 'ek') {
                   const custodyRequest = {
                     requester,
-                    ek: splits[7],
-                    uploadedAt: splits[8],
+                    ek: splits[6],
+                    uploadedAt: splits[7],
                   };
                   props.navigation.replace('Login', { custodyRequest });
-                } else if (splits[6] === 'rk') {
-                  const recoveryRequest = { requester, rk: splits[7] };
+                } else if (splits[5] === 'rk') {
+                  const recoveryRequest = { requester, rk: splits[6] };
                   props.navigation.replace('Login', { recoveryRequest });
                 }
               }

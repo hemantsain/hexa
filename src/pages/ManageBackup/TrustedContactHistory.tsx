@@ -436,7 +436,7 @@ const TrustedContactHistory = props => {
       return;
     }
     const deepLink =
-      `https://hexawallet.io/app/${WALLET_SETUP.walletName}/sss/ek/` +
+      `https://hexawallet.io/${WALLET_SETUP.walletName}/sss/ek/` +
       SHARES_TRANSFER_DETAILS[index].ENCRYPTED_KEY;
 
     switch (selectedContactModeTmp.type) {

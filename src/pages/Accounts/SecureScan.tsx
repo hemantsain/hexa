@@ -55,7 +55,7 @@ const SecureScan = props => {
     : null;
 
   const deepLink = SHARES_TRANSFER_DETAILS[0]
-    ? `https://hexawallet.io/app/${WALLET_SETUP.walletName}/sss/ek/` +
+    ? `https://hexawallet.io/${WALLET_SETUP.walletName}/sss/ek/` +
       SHARES_TRANSFER_DETAILS[0].ENCRYPTED_KEY
     : '';
   const dispatch = useDispatch();

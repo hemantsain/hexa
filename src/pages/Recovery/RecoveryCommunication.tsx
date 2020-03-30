@@ -113,10 +113,10 @@ export default function RecoveryCommunication(props) {
 
   const communicate = async selectedContactMode => {
     const deepLink =
-      `https://hexawallet.io/app/${WALLET_SETUP.walletName}/sss/rk/` + // rk: recovery key
+      `https://hexawallet.io/${WALLET_SETUP.walletName}/sss/rk/` + // rk: recovery key
       REQUEST_DETAILS.ENCRYPTED_KEY;
 
-    console.log("deepLink", deepLink)
+    console.log('deepLink', deepLink);
 
     switch (selectedContactMode.type) {
       case 'number':

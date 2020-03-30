@@ -1927,18 +1927,18 @@ export default function Home(props) {
 
   const handleDeepLink = useCallback(event => {
     const splits = event.url.split('/');
-    const requester = splits[4];
+    const requester = splits[3];
 
-    if (splits[5] === 'sss') {
-      if (splits[6] === 'ek') {
+    if (splits[4] === 'sss') {
+      if (splits[5] === 'ek') {
         const custodyRequest = {
           requester,
-          ek: splits[7],
-          uploadedAt: splits[8],
+          ek: splits[6],
+          uploadedAt: splits[7],
         };
         props.navigation.navigate('Home', { custodyRequest });
-      } else if (splits[6] === 'rk') {
-        const recoveryRequest = { requester, rk: splits[7] };
+      } else if (splits[5] === 'rk') {
+        const recoveryRequest = { requester, rk: splits[6] };
         props.navigation.replace('Home', { recoveryRequest });
       }
     }
