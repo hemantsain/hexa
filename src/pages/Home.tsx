@@ -116,7 +116,7 @@ import {
   approveTrustedContact,
 } from '../store/actions/trustedContacts';
 
-import { NOTIFICATION_HOUR } from 'react-native-dotenv';
+import { RN_NOTIFICATION_HOUR } from 'react-native-dotenv';
 import RelayServices from '../bitcoin/services/RelayService';
 import AddContactAddressBook from './Contacts/AddContactAddressBook';
 
@@ -873,7 +873,7 @@ const scheduleNotification = async () => {
 
   // Schedule the notification for 2hours on development and 2 weeks on Production in the future
   const date = new Date();
-  date.setHours(date.getHours() + Number(NOTIFICATION_HOUR));
+  date.setHours(date.getHours() + Number(RN_NOTIFICATION_HOUR));
 
   // console.log('DATE', date, NOTIFICATION_HOUR, date.getTime());
   await firebase
